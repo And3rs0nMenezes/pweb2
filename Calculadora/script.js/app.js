@@ -18,6 +18,15 @@ clearbtn.addEventListener("click", () => {
 buttons.forEach((btn) => {
 
     btn.addEventListener("click", () => {
+        if (!btn.id.match('erase')) {
+          realTimeScreenValue.push(btn.value)
+          currentInput.innerHTML = realTimeScreenValue.join('');
+
+          if (btn.classList.contains('num_btn')){
+
+            answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
+          }
+            }
         //proximos aqui
     })
 });

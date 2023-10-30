@@ -12,7 +12,7 @@ body {
 
 .container {
     background-color: #131313;
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@ body {
 }
 
 .numb_button:hover,
-.func_button:hover {
+.func_button:hover{
     background-color: rgba(29, 29, 29, 0.979);
 }
 
@@ -87,4 +87,15 @@ button#evaluate{
         background-color: #131313;
         align-items: flex-start;
     }
+}
+
+#history {
+    display: none;
+    color:white;
+}
+
+#showHistory{
+    margin:10px;
+    width:40px;
+    height:40px;
 }

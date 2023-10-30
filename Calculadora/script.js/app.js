@@ -27,6 +27,12 @@ buttons.forEach((btn) => {
             answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
           }
             }
+
+        if (btn.id.match('erese')){
+            realTimeScreenValue.pop();
+            currentInput.innerHTML = realTimeScreenValue.join('');
+            answerScreen.innerHTML = eval (realTimeScreenValue.join(''));
+        }
         //proximos aqui
     })
 });

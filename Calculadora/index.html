@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link href="./css/style.css" />
-    <script src="./script/app.js" defer></script>
+    <link href="/Calculadora/css/style.css" />
+    <script src="/Calculadora/script.js/app.js" defer></script>
 </head>
 <body>
-    <div>
+    <div class="container">
+        <section id="Display">
+            <div class="currentInput"></div>
+            <div class="answerScreen">0</div>
+        </section>
+        <section class="keypad-buttons">
+            <button type="button" class="func_button" id="clear" value="">C</button>
+            <button type="button" class="func_button" id="erase" value=""></button>
+            <button type="button" class="func_button" value="/">/</button>
+            <button type="button" class="func_button" value="%">%</button>
+            <button type="button" class="numb_button" value="7">7</button>
+            <button type="button" class="numb_button" value="8">8</button>
+            <button type="button" class="numb_button" value="9">9</button>
+            <button type="button" class="func_button" value="*">x</button>
+            <button type="button" class="numb_button" value="4">4</button>
+            <button type="button" class="numb_button" value="5">5</button>
+            <button type="button" class="numb_button" value="6">6</button>
+            <button type="button" class="func_button" value="-">-</button>
+            <button type="button" class="numb_button" value="1">1</button>
+            <button type="button" class="numb_button" value="2">2</button>
+            <button type="button" class="numb_button" value="3">3</button>
+            <button type="button" class="func_button" value="+">+</button>
+            <button type="button" class="numb_button" value="00">00</button>
+            <button type="button" class="numb_button" value="0">0</button>
+            <button type="button" class="numb_button" value=".">.</button>
+            <button type="button" class="func_button" id="evaluate" value="">=</button>
+        </section>
     </div>
 </body>
 </html>

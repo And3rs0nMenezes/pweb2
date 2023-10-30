@@ -14,3 +14,10 @@ clearbtn.addEventListener("click", () => {
     answerScreen.className = 'answerScreen';
     answerScreen.style.color = "rgba(150, 150, 150, 0.87)";
 })
+
+buttons.forEach((btn) => {
+
+    btn.addEventListener("click", () => {
+        //proximos aqui
+    })
+});

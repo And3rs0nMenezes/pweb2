@@ -89,7 +89,11 @@ let showHistoryButton = document.querySelector('#showHistory');
 let historyDiv = document.querySelector('#history');
 
 showHistoryButton.addEventListener("click", () => {
-    historyDiv.style.display = 'block';
+    if (historyDiv.style.display === "none" || historyDiv.style.display === "") {
+        historyDiv.style.display = 'block';
+    } else {
+        historyDiv.style.display = 'none';
+    }
 });
 
 let history = [];

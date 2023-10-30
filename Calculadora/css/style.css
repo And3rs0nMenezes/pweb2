@@ -69,12 +69,17 @@ body {
 }
 
 .keypad-buttons .func_button {
-    color: #ff8800;
+    color: #008000;
 }
 
 .numb_button:hover,
 .func_button:hover {
     background-color: rgba(29, 29, 29, 0.979);
+}
+
+button#evaluate{
+    background-color: #008000;
+    color:white;
 }
 
 @media only screen and (max-width: 600px) {

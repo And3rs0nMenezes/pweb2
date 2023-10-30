@@ -33,6 +33,12 @@ buttons.forEach((btn) => {
             currentInput.innerHTML = realTimeScreenValue.join('');
             answerScreen.innerHTML = eval (realTimeScreenValue.join(''));
         }
+
+        if (btn.id.match('evaluate')){
+            currentInput.className = 'answerScreen';
+            answerScreen.className = 'currentInput';
+            answerScreen.style.color = ' white';
+        }
         //proximos aqui
     })
 });

@@ -6,3 +6,11 @@ let clearbtn = document.querySelector('#clear');
 let evaluate = document.querySelector('#evaluate');
 
 let realTimeScreenValue = []
+
+clearbtn.addEventListener("click", () => {
+    realTimeScreenValue = [''];
+    answerScreen.innerHTML = 0;
+    currentInput.className = 'currentInput';
+    answerScreen.className = 'answerScreen';
+    answerScreen.style.color = "rgba(150, 150, 150, 0.87)";
+})

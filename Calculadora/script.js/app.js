@@ -39,6 +39,10 @@ buttons.forEach((btn) => {
             answerScreen.className = 'currentInput';
             answerScreen.style.color = ' white';
         }
+
+        if (typeof eval(realTimeScreenValue.join('')) == 'undefined'){
+            answerScreen.innerHTML = 0;
+        }
         //proximos aqui
     })
 });

@@ -99,3 +99,7 @@ button#evaluate{
     width:40px;
     height:40px;
 }
+#author{
+    font-size: x-small;
+    color:white;
+}

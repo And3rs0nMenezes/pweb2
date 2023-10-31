@@ -6,8 +6,8 @@ let clearbtn = document.querySelector('#clear');
 let evaluate = document.querySelector('#evaluate');
 let lastClickedButton = null;
 let realTimeScreenValue = [];
-let currentExpression = ''; // Variável para armazenar a expressão atual
-let currentResult = ''; // Variável para armazenar o resultado atual
+let currentExpression = '';
+let currentResult = '';
 
 clearbtn.addEventListener("click", () => {
     realTimeScreenValue = [''];
@@ -27,7 +27,7 @@ buttons.forEach((btn) => {
                 }
             }
             realTimeScreenValue.push(btn.value);
-            currentExpression = realTimeScreenValue.join(''); // Atualiza a expressão atual
+            currentExpression = realTimeScreenValue.join('');
             currentInput.innerHTML = currentExpression;
 
             if (btn.classList.contains('func_button')) {
@@ -35,16 +35,16 @@ buttons.forEach((btn) => {
             }
             if (btn.classList.contains('numb_button')) {
                 lastClickedButton = null;
-                currentResult = evaluateMath(currentExpression); // Armazena o resultado atual
+                currentResult = evaluateMath(currentExpression);
                 answerScreen.innerHTML = currentResult;
             }
         }
 
         if (btn.id.match('erase')) {
             realTimeScreenValue.pop();
-            currentExpression = realTimeScreenValue.join(''); // Atualiza a expressão atual
+            currentExpression = realTimeScreenValue.join('');
             currentInput.innerHTML = currentExpression;
-            currentResult = evaluateMath(currentExpression); // Atualiza o resultado atual
+            currentResult = evaluateMath(currentExpression);
             answerScreen.innerHTML = currentResult;
         }
 
@@ -53,7 +53,7 @@ buttons.forEach((btn) => {
             currentInput.className = 'answerScreen';
             answerScreen.className = 'currentInput';
             answerScreen.style.color = "white";
-            addToHistory(currentExpression, currentResult); // Adiciona a expressão e o resultado ao histórico
+            addToHistory(currentExpression, currentResult);
         }
 
         if (typeof eval(currentExpression) == 'undefined') {

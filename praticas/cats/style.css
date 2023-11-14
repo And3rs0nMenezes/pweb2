@@ -3,26 +3,105 @@
     margin: 0px;
 }
 
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #a0a0a0;
+}
+
+
 #gatinhos{
     display: flex;
+    align-items:center;
+    justify-content:center;
     gap: 10px;
     flex-wrap: wrap;
-    padding: 20px;
+    margin-top:100px;
 }
 
 img {
-    display: block;
-    width: auto;
+    width: 300px;
     height: 250px;
     border-radius: 10px;
+    background-color: white;
 }
 .div-logos{
     display: flex;
-    gap: 60px;
+    align-items:center;
+    justify-content:center;
+    gap: 10px;
     flex-wrap: wrap;
-    padding: 20px;
+    margin-top:6px;
 }
 .card{
+    align-items: center;
+    flex-direction: column;
     display: flex;
-    margin;10x;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin:0;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.card h5{
+    background-color: white;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+}
+
+.card img{
+    width: 400px;
+    height: 250px;
+}
+
+#cabecalho{
+    height:10vh;
+    width:100vw;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background:#000000;
+    position:fixed;
+}
+
+input[type="text"] {
+    margin-top: 8px;
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius:10px;
+}
+
+button {
+    margin-top: 8px;
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius:10px;
+}
+
+button:hover {
+    background-color: #a0a0a0;
+}
+
+#botoes{
+    margin-left:10px;
+}
+
+#pesquisa{
+    margin-right:25px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#searchButton {
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+    margin-top:16px;
 }

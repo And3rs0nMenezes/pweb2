@@ -1,3 +1,4 @@
+//gerar 10 fotos de gatos aleatorias
 const buscarGatinhos = (e) => {
     e.preventDefault()
     const xhr = new XMLHttpRequest()
@@ -31,11 +32,11 @@ const buscarGatinhos = (e) => {
     }
     xhr.send()
 }
-
 const btnMostrar = document.querySelector("#mostrar-gatinhos")
 btnMostrar.addEventListener("click", buscarGatinhos)
 
-const getMarcas = () => {
+//exibir marcas de carro e pesquisar por nome
+const getMarcas = (searchTerm) => {
     const tarefas = fetch('https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/data.json');
 
     tarefas
@@ -45,18 +46,24 @@ const getMarcas = () => {
             divMarcas.classList.add("div-logos");
 
             marcas.forEach(marca => {
-                const div = document.createElement('div')
-                const logo = document.createElement('img');
-                const nome = document.createElement('h5');
+                if (!searchTerm || marca.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    const div = document.createElement('div');
+                    const logo = document.createElement('img');
+                    const nome = document.createElement('h5');
 
-                logo.src = marca.image?.optimized;
-                nome.textContent = marca.name;
-                div.classList.add("card");
+                    logo.src = marca.image?.optimized;
+                    nome.textContent = marca.name;
+                    div.classList.add("card");
 
-                div.appendChild(logo);
-                div.appendChild(nome);
-                divMarcas.appendChild(div)
+                    div.appendChild(logo);
+                    div.appendChild(nome);
+                    divMarcas.appendChild(div);
+                }
             });
+            const existingLogos = document.querySelector(".div-logos");
+            if (existingLogos) {
+                document.body.removeChild(existingLogos);
+            }
 
             document.body.appendChild(divMarcas);
         })
@@ -64,5 +71,10 @@ const getMarcas = () => {
 }
 
 const btnMarcas = document.querySelector("#mostrar-marcas");
-btnMarcas.addEventListener("click", getMarcas);
+btnMarcas.addEventListener("click", () => getMarcas());
 
+const searchButton = document.querySelector("#searchButton");
+searchButton.addEventListener("click", () => {
+    const searchInput = document.querySelector("#searchInput");
+    getMarcas(searchInput.value);
+});

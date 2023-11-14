@@ -4,18 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gatos</title>
+    <title>Gatos e Marcas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    Aqui não tem nada. mas ao clicar ,gatinhos fofinhos irão aparecer.
-    <br>
-    <button id="mostrar-gatinhos">Mostrar gatinhos</button>
-    <button id="mostrar-marcas">Mostrar marcas</button>
-    <div id="marcas"></div>
+    <div id="cabecalho">
+    <div id="botoes">
+    <button class="button" id="mostrar-gatinhos">Mostrar gatinhos</button>
+    <button class="button" id="mostrar-marcas">Mostrar marcas</button>
+</div>
+    <div id="pesquisa">
+    <input type="text" id="searchInput" placeholder="Digite o nome da marca">
+    <div id="searchButton">
+    <ion-icon onclick="pesquisarProduto()" name="search-circle-outline"></ion-icon>
+</div>
+    </div>
+</div>
+<br>
     <div id="gatinhos"></div>
     <script src="app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

@@ -36,26 +36,33 @@ const btnMostrar = document.querySelector("#mostrar-gatinhos")
 btnMostrar.addEventListener("click", buscarGatinhos)
 
 const getMarcas = () => {
-    const tarefas = fetch('https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/data.json')
+    const tarefas = fetch('https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/data.json');
 
+    tarefas
+        .then(resposta => resposta.json())
+        .then(marcas => {
+            const divMarcas = document.createElement('div');
+            divMarcas.classList.add("div-logos");
 
-tarefas
-    .then(resposta => resposta.json())
-    .then(marcas => {
-        const ul = document.createElement('ul')
-        marcas.forEach(marca => {
-            const li = document.createElement('li')
-            const logo = document.createElement('img')
-            logo.src = marca.image?.optimized
-            const name = document.createElement('p')
-            name.src = marca.name
-            li.appendChild(logo)
-            ul.appendChild(li)
-            console.log(marcas)
+            marcas.forEach(marca => {
+                const div = document.createElement('div')
+                const logo = document.createElement('img');
+                const nome = document.createElement('h5');
+
+                logo.src = marca.image?.optimized;
+                nome.textContent = marca.name;
+                div.classList.add("card");
+
+                div.appendChild(logo);
+                div.appendChild(nome);
+                divMarcas.appendChild(div)
+            });
+
+            document.body.appendChild(divMarcas);
         })
-        document.body.appendChild(ul)
-    })
-    .catch(erro => console.log(erro))
+        .catch(erro => console.log(erro));
 }
-const btnMarcas = document.querySelector("#mostrar-marcas")
-btnMarcas.addEventListener("click",getMarcas)
+
+const btnMarcas = document.querySelector("#mostrar-marcas");
+btnMarcas.addEventListener("click", getMarcas);
+

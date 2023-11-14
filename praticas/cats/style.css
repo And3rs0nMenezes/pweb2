@@ -16,17 +16,13 @@ img {
     height: 250px;
     border-radius: 10px;
 }
-
-ul{
+.div-logos{
     display: flex;
-    gap: 10px;
+    gap: 60px;
     flex-wrap: wrap;
     padding: 20px;
-    list-style-type: none;
-
 }
-
-li{
-    height: 30vh;
-    width: 30vw;
+.card{
+    display: flex;
+    margin;10x;
 }

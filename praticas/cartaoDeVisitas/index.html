@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="./style/style.css">
+    <title> Profile Card </title>
+
+</head>
+
+<body>
+    <div class="modal">
+        <img src="./img/profile.jpg" alt="" class="profile-img">
+        <div class="close"></div>
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="hamburger-menu">
+                    <div class="center"></div>
+                </div>
+                <div id="search">
+                    <form id="search-form">
+                        <input type="text" id="user-name-search" title="Pesquisar" placeholder="Pesquisar">
+                        <button type="submit" id="search-send" ><i class="fa fa-share" style="color: #ffffff;"></i></button>
+                        
+                    </form>
+                </div>
+                <a href="mailto: @gmail.com" class="mail">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <div class="main">
+                    <div class="image">
+                        <div class="hover">
+                            <i class="fas fa-camera fa-2x"></i>
+                        </div>
+                    </div>
+                    <h3 class="name">Anderson Menezes</h3>
+                    <h3 class="sub-name">@And3rs0nMenezes</h3>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="left">
+                    <div class="about-container">
+                        <h3 class="title"> About Me ! </h3>
+                        <p class="text">Hi! My name is Anderson. I am an Information Systems academic.💻🧑‍🎓</p>
+                    </div>
+                    <div class="icons-container">
+                       
+                        <a href="https://br.linkedin.com/in/anderson-l-de-menezes-838851181/" target="_blank" class="icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://github.com/And3rs0nMenezes" target="_blank" class="icon" id="git">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        
+                        <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/ders0n_/?next=%2F" target="_blank" class="icon" id="ig">
+                            <i class="fab fa-instagram"></i>    
+                        </a>                      
+                        
+                        <a href="https://facebook.com" target="_blank" class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    
+                    </div>
+                    <div class="buttons-wrap">
+                        <div class="follow-wrap">
+                            <a href="https://github.com/And3rs0nMenezes" target="_blank" class="follow"> Follow </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div>
+                        <h3 class="number" id="posts-count">17</h3>
+                        <h3 class="number-title">Posts</h3>
+                    </div>
+                    <div>
+                        <h3 class="number" id="following-count">5</h3>
+                        <h3 class="number-title">Following</h3>
+                    </div>
+                    <div>
+                        <h3 class="number" id="followers-count">6</h3>
+                        <h3 class="number-title">Followers</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+
+</body>
+</html>
